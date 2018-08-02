@@ -7,7 +7,7 @@
 <body> 
   <?php
   include('../mysql.php');
- session_start (); 
+ include("session.php");
   $username = $_POST ["username"]; 
   $oldpassword = $_POST ["oldpassword"]; 
   $newpassword = $_POST ["newpassword"]; 
