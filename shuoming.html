@@ -1,0 +1,11 @@
+首先，打开终端，进入项目所在的文件夹；
+
+输入命令：git config http.postBuffer 524288000
+
+之前git中的配置是没有这一项的,执行完以上语句后输入git config -l可以看到配置项的最下面多出了一行我们刚刚配置的内容. (52428000=500×1024×1024,即500M)
+
+
+git init
+git add hun88.sql
+git commit -m "ddd"
+git push -u origin master   ???
