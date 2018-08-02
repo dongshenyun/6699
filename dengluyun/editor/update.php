@@ -7,6 +7,7 @@
 </head>
 <body>
 <?php
+include('index.php');
 include('../../mysql.php');
 $id=$_GET['id'];
 $id=htmlentities($id);
