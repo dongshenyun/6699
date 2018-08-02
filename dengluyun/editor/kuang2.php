@@ -3,6 +3,7 @@
 
 <?php
 //在表格中显示表的数据，常用方式
+include('index.php');
    include('../../mysql.php');
 	echo "<center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name='pid'>";
        $sql=$db->select("hotai","where name !='' order by concat(path,id)");
