@@ -38,6 +38,7 @@ tr:hover{
 </style>
 
 <?php
+include('index.php');
 include('../../fyclass.php');
 include('../../mysql.php');
 $sql=$db->select("hotai","");  
