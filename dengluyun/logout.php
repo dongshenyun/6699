@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <?php
 
-    session_start();
+ include("session.php");
    
     if(isset($_SESSION['name'])){
             session_unset();//free all session variable
