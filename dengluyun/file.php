@@ -1,6 +1,7 @@
 <meta charset="utf-8">
 
 <?php
+include("session.php");
 $filelist=array("12.php");
 
 
