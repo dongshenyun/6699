@@ -1,4 +1,5 @@
 <?php
+include('index.php');
   include('../../mysql.php');
   $pid=$_GET['pid']+0;
 if($pid>0){
