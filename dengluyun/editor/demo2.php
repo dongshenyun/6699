@@ -27,7 +27,7 @@
 </body>
 </html>
 <?php 
-
+include('index.php');
 if(isset($_POST['sub'])){
 	
         $title=$_POST['bti'];

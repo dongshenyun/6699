@@ -4,7 +4,7 @@
 	<input type="hidden" name="path" value="<?php if(isset($_GET['path'])){echo "{$_GET['path']}";}else{echo "0,";} ?>">
 <?php
 //在表格中显示表的数据，常用方式
-  
+  include('index.php');
 	echo "<center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name=''>";
        //$sql="select * from hotai where name !='' order by concat(path,id)";
 		if(isset($_GET['name'])){

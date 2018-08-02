@@ -1,3 +1,4 @@
+<?php include('index.php'); ?>
 <html>
 <meta charset="utf-8">
 <head>

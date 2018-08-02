@@ -1,5 +1,5 @@
 <?php
-
+include('index.php');
 include('../../mysql.php');
 switch($_GET['action']){
 	case 'add':

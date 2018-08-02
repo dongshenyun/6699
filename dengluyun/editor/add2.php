@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-
+<?php include('index.php'); ?>
 
 
 

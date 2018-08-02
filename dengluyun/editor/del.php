@@ -3,6 +3,7 @@
 
 
 <?php
+include('index.php');
 function del(){
 include('../../mysql.php');
 $id=$_GET['id'];

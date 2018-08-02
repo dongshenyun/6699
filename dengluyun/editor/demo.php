@@ -14,6 +14,7 @@
         	 
 		
 			 <?php 
+                          include('index.php');
 			 include('../../mysql.php');
           //include('add.php');
 		  include('kuang.php');
