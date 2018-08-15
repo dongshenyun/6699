@@ -218,7 +218,8 @@ window.location.href="<?php echo "wap.php"; ?>";
  <div class="header"><p>&#19996;&#21319;&#30340;&#20315;&#27861;</p></div>
  <div id="nav">
 <ul>
-         <li id="menu1" onclick="setTab('menu',1,8)"><a class="home" href="index.php">&#35270;&#39057;1</a></li>
+	 <li><a href="http://dongshenfofa.top">首页</a></li>
+         <li id="menu1" onclick="setTab('menu',1,8)"><a href="index.php">&#35270;&#39057;1</a></li>
          <li id="menu2" onclick="setTab('menu',2,8)"><a href="#">&#35270;&#39057;2</li>
          <li id="menu3" onclick="setTab('menu',3,8)"><a href="#">&#35270;&#39057;3</li>
          <li id="menu4" onclick="setTab('menu',4,8)"><a href="#">&#35270;&#39057;4</li>
