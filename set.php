@@ -23,6 +23,7 @@
  <div id="header"><div class="j">&#19996;&#21319;&#30340;&#20315;&#27861;</div></div>
  <div id="nav">
       <ul>
+	 <li><a href="http://dongshenfofa.top">首页</a></li>
          <li><a  class="home" href="index.php">&#35270;&#39057;1</a></li>
          <li><a href="index.php?f=1">&#35270;&#39057;2</a></li>
          <li><a href="index.php?f=2">&#35270;&#39057;3</a></li>
