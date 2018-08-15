@@ -283,7 +283,7 @@ include('shipin4.php');
 $sql=$db->select("hotai","where pid=0 order by concat(path,id)");
 
 if($sql){
-while($rows=mysql_fetch_array($sql)){
+while($rows=mysqli_fetch_array($sql)){
 echo "<li><a href='set.php?fenlei={$rows['id']}'>{$rows['name']}</a></li>";
 }
 }
