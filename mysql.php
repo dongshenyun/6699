@@ -18,9 +18,9 @@
 
 
 public function connect(){
-    $this->conn = mysql_connect($this->host,$this->root,$this->password) or die("DB Connnection Error !".mysql_error());
-    mysql_select_db($this->database,$this->conn);
-    mysql_query("set names utf8");
+    $this->conn = mysqli_connect($this->host,$this->root,$this->password,$this->database) or die("DB Connnection Error !".mysql_error());
+   // mysqli_select_db($this->conn,$this->database);
+    mysqli_query($this->conn,"set names utf8");
 }
          
 public function dbClose(){
@@ -30,15 +30,15 @@ public function dbClose(){
 //对mysql_query()、mysql_fetch_array()、mysql_num_rows()函数进行封装
 public function query($sql){
      
-	 return mysql_query($sql);
+	 return mysqli_query($this->conn,$sql);
 }
         
 public function myarray($result){
-    return mysql_fetch_array($result);
+    return mysqli_fetch_array($result);
 }
         
 public function rows($result){
-    return mysql_num_rows($result);
+    return mysqli_num_rows($result);
 }
 
 		
@@ -61,7 +61,7 @@ public function delete($tableName,$condition){
     $this->query("DELETE FROM $tableName $condition");
 }
 }
-$db = new Mysql("127.0.0.1","root","root","hun88");		
+$db = new Mysql("mysql.88.svc","dongshenyun","dongshenyun","dongshenyun");		
 		
 ?>		
 		
