@@ -1,6 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="applicable-device" content="pc">
 <title>&#19996;&#21319;&#30340;&#20315;&#27861;</title>
 <link href="title.ico" rel="shortcut icon"/>
 <style>
