@@ -49,8 +49,8 @@ $pid=htmlentities($pid);
 if(!empty($_GET['id'])){
 $id=htmlspecialchars($id);
 $sql = $db->select("hotai","where id='$id'");
-$rows = mysql_fetch_array($sql);
-echo "<center>".htmlspecialchars_decode($rows['text'])."</center>";;
+$rows = mysqli_fetch_array($sql);
+echo "<center><div class='bbb'>".htmlspecialchars_decode($rows['text'])."</div></center>";;
       //break;
 echo "<br>";
 //default:
@@ -58,7 +58,7 @@ echo "<br>";
 elseif($_GET['id']=""or!empty($_GET['fenlei'])){
 
 $sql=$db->select("hotai","where pid={$pid}");  
-$totalRows=mysql_num_rows($sql);   //&#24635;&#35760;&#24405;&#25968;  
+$totalRows=mysqli_num_rows($sql);   //&#24635;&#35760;&#24405;&#25968;  
 $pageSize=8;
 $fenye=new Page($pageSize,$totalRows);
 
@@ -67,7 +67,7 @@ $fenye=new Page($pageSize,$totalRows);
 //echo $startCount;
 $sqli=$db->select("hotai","where pid={$pid} limit {$fenye->limit()}");
 if($sqli){
-while($tows=mysql_fetch_array($sqli)){
+while($tows=mysqli_fetch_array($sqli)){
    echo "<li><a href='set.php?fenlei={$tows['id']}'>{$tows['name']}</a><li><br>";
    echo "<hr>";
    echo "<li><a href='set.php?id={$tows['id']}'>{$tows['title']}</a></li><br>";
