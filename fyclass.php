@@ -156,12 +156,12 @@ public function end()
 
 public function all()
 {
-echo "<center>{$this->first()}";	
+echo "<center>&#24635;&#39029;&#25968;:{$this->page}/{$this->totalpage}";
+echo $this->first();	
 echo $this->prev();
-echo $this->midden();
+echo $this->middens();
 echo $this->next();	
 echo "{$this->end()}</center>";
-	//return $html;
 	
 }
 
