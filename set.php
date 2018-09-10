@@ -41,6 +41,28 @@
 include('mysql.php');
 include('fyclass.php');
 
+$word=$_GET['keyword'];
+$word=htmlspecialchars($word);
+if(!empty($word)){
+$sqls=$db->select("hotai","where title like '%{$word}%' order by id desc");
+$totalRows=mysqli_num_rows($sqls);   //&#24635;&#35760;&#24405;&#25968; 
+$pageSize=8;
+$feng=new Page($pageSize,$totalRows);	
+$sqld=$db->select("hotai","where title like '%{$word}%' order by id desc limit {$feng->limit()}");
+
+while($qows=mysqli_fetch_array($sqld)){
+   echo "<li><a href='set.php?fenlei={$qows['id']}'>{$qows['name']}</a><li><br>";
+   echo "<hr>";
+   echo "<li><a href='set.php?id={$qows['id']}'>{$qows['title']}</a></li><br>";
+  
+}
+$feng->all();
+} 
+	 
+	 
+	 
+	 
+	 
 //switch(''){
 $pid=$_GET['fenlei'];	
 	//case $id:
