@@ -1,7 +1,6 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="applicable-device" content="pc">
 <title>&#19996;&#21319;&#30340;&#20315;&#27861;</title>
 <link href="title.ico" rel="shortcut icon"/>
 <style>
@@ -13,7 +12,15 @@
      background:#ECF5FF;
      margin-bottom:10px;
 	 opacity:0.9;
+	 border:1px solid #ECF5FF;
  }
+ 
+ .shipin ul{list-style:none;width:100%;overflow:hidden;border:1px solid #FFF3EE;margin-bottom:10px;}
+ 
+ .shipin ul li{width:50%;float:left;} 
+ .shipin ul li a{text-decoration:none;display:block;}
+ 
+ 
 p {
     font-family:"yellow";
     color:#C4E1FF;
@@ -42,8 +49,9 @@ padding:20px 5px 15px 20px;
      margin:0 auto;
      margin-bottom:10px;
 	 opacity:0.9;
+	 border:1px solid #C4E1FF;
  }
- 
+ #nav ul{list-style:none;margin:0px;}
  #main{
      width:960px;
      min-height:100%;
@@ -61,6 +69,7 @@ padding:20px 5px 15px 20px;
      background:#ECF5FF;
      float:right;
 	 opacity:0.9;
+	 border:1px solid #C4E1FF;
   }
 .h{
 	line-height:30px;
@@ -75,7 +84,7 @@ padding:20px 5px 15px 20px;
      background:#C4E1FF;
      overflow:hidden;
   }
-  ul{list-style:none;}
+  ul{list-style:none;margin-bottom:10px;}
   ul li a{text-decoration:none;display:block;}
  #main .left{
      width:750px;
@@ -85,10 +94,9 @@ padding:20px 5px 15px 20px;
     float:left;
    margin-bottom:10px;
 	opacity:0.9;
+	border:1px solid #C4E1FF;
  }
- 
- 
- 
+
  #footer{
      width:960px;
      height:50px;
@@ -96,6 +104,7 @@ padding:20px 5px 15px 20px;
      margin:0 auto;
      margin-top:10px;
 	 opacity:0.9;
+	 border:1px solid #C4E1FF;
   }
   #nav ul{
       list-style:none;
@@ -109,7 +118,7 @@ padding:20px 5px 15px 20px;
  #nav li a{
      display:block;
       color:black;
-     width:104px;
+     width:80px;
     font-family:&#40657;&#20307;;
 	line-height:30px;
      text-decoration:none;
@@ -129,6 +138,7 @@ padding:20px 5px 15px 20px;
    font-size:30px;
 background:yellow;
  }
+ #my{overflow:scroll;overflow-y:hidden}
  </style>
  <script> 
 <!-- 
@@ -168,6 +178,7 @@ document.getElementById('con_menu_8').style.display='block';
 function conh(){
 document.getElementById('con_menu_1').style.display='block';
 }
+
  //&#24179;&#21488;&#12289;&#35774;&#22791;&#21644;&#25805;&#20316;&#31995;&#32479;  
 var system ={  
 win : false,  
@@ -219,7 +230,7 @@ window.location.href="<?php echo "wap.php"; ?>";
  <div class="header"><p>&#19996;&#21319;&#30340;&#20315;&#27861;</p></div>
  <div id="nav">
 <ul>
-	 <li><a href="http://dongshenfofa.top">首页</a></li>
+  <li><a href="http://dongshenyun.github.io">首页</a></li>
          <li id="menu1" onclick="setTab('menu',1,8)"><a href="index.php">&#35270;&#39057;1</a></li>
          <li id="menu2" onclick="setTab('menu',2,8)"><a href="#">&#35270;&#39057;2</li>
          <li id="menu3" onclick="setTab('menu',3,8)"><a href="#">&#35270;&#39057;3</li>
@@ -227,8 +238,10 @@ window.location.href="<?php echo "wap.php"; ?>";
          <li id="menu5" onclick="setTab('menu',5,8)"><a href="#">&#35270;&#39057;5</li>
          <li id="menu6" onclick="setTab('menu',6,8)"><a href="#">&#35270;&#39057;6</li>
 		 <li id="menu7" onclick="setTab('menu',7,8)"><a href="#">&#35270;&#39057;7</li>
-		 <li id="menu8" onclick="setTab('menu',8,8)"><a href="#">&#35270;&#39057;8</li>
-    </ul>
+		 <li id="menu8" onclick="setTab('menu',8,8)"><a href="#">&#35270;&#39057;8</li>       
+
+
+		 </ul>
 	
  </div>
  <div id="main">
@@ -277,9 +290,11 @@ include('shipin4.php');
    <div class="right">
    <center>
    <ul>
-<div class="h"><h4>&#32463;  &#38401;</h4></div>
+<div class="h"><h4>
+经阁
+</h4></div>
+<div style="border:1px solid #C4E1FF">
 <ul>
-
 <?php
 
 $sql=$db->select("hotai","where pid=0 order by concat(path,id)");
@@ -295,10 +310,16 @@ echo "<li><a href='set.php?fenlei={$rows['id']}'>{$rows['name']}</a></li>";
 
 ?>
 </ul>
+</div>
 </ul>
   </center> 
-   
+   <div class="h" style="margin-top:30px;border:1px solid #C4E1FF">
+   <form action="set.php" method="GET" style="float:center;height:30px;padding:20px 20px 5px 30px;">
+<input type="text" name="keyword" size="8"><input type="submit" name="sub" value="经文查询">
+</form> 
+</div>
    </div>
+   
  </div>
  <div id="footer">
 <center><div class="u">&#22238;&#21521;:&#24895;&#27492;&#21151;&#24503;&#31181;&#21892;&#26681;&#65292;&#32047;&#19990;&#24616;&#20146;&#21516;&#27838;&#24681;&#12290;&#30001;&#27492;&#35299;&#33073;&#35832;&#33510;&#24700;&#65292;&#20849;&#35777;&#33769;&#25552;&#24230;&#26377;&#24773;!</div></center></div>
